@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --blue-gradient : linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%) ;
+  .buttun{
+      transition: all 300ms ease-in;
+  }
+  .buttun:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+  }
+}
