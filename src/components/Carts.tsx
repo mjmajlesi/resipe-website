@@ -1,13 +1,19 @@
-import React from 'react'
-import { Irecipes } from './Populer'
+import React from 'react';
+import { Irecipes } from './Populer';
+import styled from 'styled-components';
 
-function Carts({title , vegan , image , veryPopuler , dishTypes}:Irecipes) {
-  return (
-    <div className='w-72 flex flex-col items-center gap-5 p-3 bg-slate-200'>
-        <img className='rounded-md' src={image} alt={title} />
-        <h1 className='font-semibold line-clamp-2 text-sm'>{title}</h1>
-    </div>
-  )
+export default function Carts({ title, vegan, image, veryPopuler, dishTypes }: Irecipes) {
+    return (
+        <SCarts>
+            <img className='rounded-2xl w-full' src={image} alt={title} />
+            <h4 className='line-clamp-1 text-center p-4 '>{title}</h4>
+        </SCarts>
+    )
 }
 
-export default Carts
+const SCarts = styled.div`
+    overflow: hidden;
+    position: relative;
+    min-width: 300px;
+    gap: 50px;
+`

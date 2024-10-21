@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export default function useLocalStorage<T>(kay: string , initialvalue: T){
         const [value , setValue] = useState<T>(()=>{
-                let LocalStorage = localStorage.getItem("cardItems")
+                let LocalStorage = localStorage.getItem("Popular")
                 return LocalStorage !== null ? JSON.parse(LocalStorage) : initialvalue
             }
         );

@@ -4,7 +4,7 @@ export type Tchildern = {
 };
 export default function Container({children}: Tchildern){
     return(
-        <div className="mx-28">
+        <div className="my-0 mx-[15%]">
             {children}
         </div>
     )

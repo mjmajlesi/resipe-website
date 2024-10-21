@@ -1,41 +1,35 @@
-import React, { useEffect, useState } from 'react'
-import { getPopuler } from '../api';
+import React, { useEffect } from 'react'
+import { getVegetarian } from '../api';
 import Carts from './CartsMainPage';
 import { Splide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css'
 import useLocalStorage from './useLocalStorage';
+import { Irecipes } from './Populer';
 import Container from './container';
 import CartsMainPage from './CartsMainPage';
-export interface Irecipes {
-    title: string,
-    dishTypes: "lunch" | "soap" | "main course" | 'main dish' | "dinner",
-    id: number,
-    image: string,
-    vegan: boolean,
-    veryPopuler: boolean,
-}
-function Populer() {
 
-    const [Populer, setPopuler] = useLocalStorage<Irecipes[]>("Popular", []);
+function Veggie() {
+
+    const [Veggie, setveggie] = useLocalStorage<Irecipes[]>("Veggie", []);
     useEffect(() => {
-        getPopuler().then(res =>
-            setPopuler(res.recipes)
+        getVegetarian().then(res =>
+            setveggie(res.recipes)
         )
     }, [])
 
     return (
         <Container>
-            <div className=' mb-4'>
-                <h2 className='mb-3 text-base '>Our Vegetarian Picks</h2>
+            <div className=' mt-8'>
+                <h2 className='mb-3'>Our Vegetarian Picks</h2>
                 <Splide options={{
-                    perPage: 3,
+                    perPage: 4,
                     pagination: false,
                     arrows: false,
                     drag: 'free',
-                    gap: '3rem'
+                    gap: '4rem'
                 }}>
                     {
-                        Populer.map(recipe => (
+                        Veggie.map(recipe => (
                             <CartsMainPage key={recipe.id} {...recipe} />
                         ))
                     }
@@ -45,4 +39,4 @@ function Populer() {
     )
 }
 
-export default Populer
+export default Veggie
