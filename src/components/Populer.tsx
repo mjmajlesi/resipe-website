@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { getPopuler } from '../api';
-import Carts from './CartsMainPage';
 import { Splide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css'
 import useLocalStorage from './useLocalStorage';
@@ -13,6 +12,7 @@ export interface Irecipes {
     image: string,
     vegan: boolean,
     veryPopuler: boolean,
+    
 }
 function Populer() {
 

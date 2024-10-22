@@ -22,3 +22,8 @@ export const getSearched = async (name: string | undefined)=>{
 
     return data;
 }
+export const getInformation = async (name: string | undefined)=>{
+    const {data} = await axios.get(`https://api.spoonacular.com/recipes/${name}/information?apiKey=${process.env.REACT_APP_API_KEY}`)
+
+    return data;
+}
