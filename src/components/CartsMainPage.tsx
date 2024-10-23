@@ -4,7 +4,7 @@ import { SplideSlide } from '@splidejs/react-splide'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-function CartsMainPage({ title, vegan, image, veryPopuler, dishTypes , id }: Irecipes) {
+function CartsMainPage({ title, image , id }: Irecipes) {
   return (
     <SplideSlide >
       <Link to={`./recipe/${id}`}>

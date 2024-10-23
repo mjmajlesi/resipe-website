@@ -43,7 +43,7 @@ const LinkStyle = styled(NavLink)`
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
-    transform: scale(0.8);
+    transform: scale(0.8);//
 
     h4 {
         color: white;
@@ -57,6 +57,7 @@ const LinkStyle = styled(NavLink)`
 
     &.active {
         background: linear-gradient();
+        //
     }
 `
 

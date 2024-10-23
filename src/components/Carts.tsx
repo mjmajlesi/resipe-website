@@ -3,7 +3,7 @@ import { Irecipes } from './Populer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export default function Carts({ title, vegan, image, veryPopuler, dishTypes , id }: Irecipes) {
+export default function Carts({ title, image, id }: Irecipes) {
     return (
         <SCarts>
             <Link to={`/recipe/${id}`}>

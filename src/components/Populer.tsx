@@ -7,11 +7,11 @@ import Container from './container';
 import CartsMainPage from './CartsMainPage';
 export interface Irecipes {
     title: string,
-    dishTypes: "lunch" | "soap" | "main course" | 'main dish' | "dinner",
+    dishTypes?: "lunch" | "soap" | "main course" | 'main dish' | "dinner",
     id: number,
     image: string,
-    vegan: boolean,
-    veryPopuler: boolean,
+    vegan?: boolean,
+    veryPopuler?: boolean,
     
 }
 function Populer() {

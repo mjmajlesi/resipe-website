@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getCuisine } from '../api';
 import useLocalStorage from '../components/useLocalStorage';
 import { Irecipes } from '../components/Populer';
@@ -34,7 +34,7 @@ function Cuisine() {
 
 export const Grid = styled.div`
 display : grid;
-grid-template-columns : repeat(auto-fit , minmax(20rem , 1fr));
+grid-template-columns : repeat(auto-fit , minmax(20rem , 1fr));//
 grid-gap : 3rem;
 `
 

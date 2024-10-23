@@ -16,9 +16,9 @@ export default function Button({children , className , variant , ...root}:Tchild
 function Changevariant(variant? : Tvariant) {
   switch (variant) {
     case "normal":
-      return {backgroundColor : "black" , color : "white"}
+      return {backgroundColor : "white" , color : "black" , border : "2px" , borderColor : "black"}
     case "dark":
-      return {backgroundColor : "white" , color : "black"}
+      return {backgroundColor : "black" , color : "white"}
     case "login":
       return {backgroundColor : "blue" , color : "white"}
       case "seccece":
