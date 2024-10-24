@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getCuisine } from '../api';
 import useLocalStorage from '../components/useLocalStorage';
 import { Irecipes } from '../components/Populer';
@@ -20,12 +20,14 @@ function Cuisine() {
 
     return (
         <Container>
-            <h1 className='text-center font-bold text-xl my-6'> { params.type }</h1>
+            <h1 className='text-center font-bold text-xl my-6'> {params.type}</h1>
             <Grid>
                 {Cuisine.map((items) => (
-                    <Carts key={items.id}
-                        {...items}
-                    />
+                    <Link to={`/recipe/${items.id}`}>
+                        <Carts key={items.id}
+                            {...items}
+                        />
+                    </Link>
                 ))}
             </Grid>
         </Container>

@@ -10,7 +10,14 @@ type Tresipe = {
   image: string,
   summary: string,
   Instructions: string,
+  extendedIngredients: TextendedIngredients
 }
+
+export type TextendedIngredients = {
+  id: number,
+  image: string,
+  original: string,
+}[]
 
 function Recipe() {
 
@@ -27,10 +34,10 @@ function Recipe() {
     <Container>
       <Datialrecipe>
         <div className='flex flex-col items-center'>
-          <h1 className='mb-8 font-semibold'>{valuerecipe?.title}</h1>
+          <h1 className='mb-6 font-semibold'>{valuerecipe?.title}</h1>
           <img width={400} className='rounded-lg' src={valuerecipe?.image} alt="" />
         </div>
-        <div>
+        <div className='w-400 p-1'>
           <Button
             onClick={() => SetActiveTab("Instructions")}
             variant='normal'
@@ -45,22 +52,33 @@ function Recipe() {
           >
             Ingredients
           </Button>
-          <div>
-            {valuerecipe?.summary ? (
-              <h3 dangerouslySetInnerHTML={{ __html: valuerecipe.summary }} />
-            ) : (
-              <p>No summary available</p>
-            )}
-          </div>
+          {
+            ActiveTab === "Instructions" ? (
+              <div className='my-8'>
+                {valuerecipe?.summary && (
+                  <h3 dangerouslySetInnerHTML={{ __html: valuerecipe.summary }} />
+                )}
+                {valuerecipe?.Instructions && (
+                  <h3 dangerouslySetInnerHTML={{ __html: valuerecipe.Instructions }} />
+                )}
+              </div>
+            ) :
+              <ul className='my-8'>
+                {
+                  valuerecipe?.extendedIngredients.map((Ingredients) => (
+                    <li className='' key={Ingredients.id}>{Ingredients.original}</li>
+                  ))
+                }
+              </ul>
+          }
         </div>
       </Datialrecipe>
-    </Container>
+    </Container >
   )
 }
 
 const Datialrecipe = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
   display: flex;
   gap: 100px;
   .active {
