@@ -4,18 +4,16 @@ import { GiNoodles, GiChopsticks } from 'react-icons/gi'
 import Container from './container';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Search from './Search';
 function Category() {
     return (
         <>
-        <Search />
         <Container>
             <div className='flex justify-center my-8'>
-                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'} to={'/cuisine/italian'}>
+                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'} to={'/cuisine/Italian'}>
                     <FaPizzaSlice className=' text-white' />
                     <h4>Italian</h4>
                 </LinkStyle>
-                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/american'}>
+                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/American'}>
                     <FaHamburger />
                     <h4>American</h4>
                 </LinkStyle>
@@ -23,9 +21,9 @@ function Category() {
                     <GiNoodles />
                     <h4>Thai</h4>
                 </LinkStyle>
-                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/japenese'}>
+                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/Japanese'}>
                     <GiChopsticks />
-                    <h4>Japenese</h4>
+                    <h4>Japanese</h4>
                 </LinkStyle>
             </div>
         </Container>

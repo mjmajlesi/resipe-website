@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 export default function Carts({ title, image, id }: Irecipes) {
     return (
         <SCarts>
+            <Link to={`/recipe/${id}`}>
                 <img className='rounded-2xl w-full' src={image} alt={title} />
                 <h4 className='line-clamp-1 text-center p-4 '>{title}</h4>
+            </Link>
         </SCarts>
     )
 }

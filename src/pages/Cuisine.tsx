@@ -21,20 +21,23 @@ function Cuisine() {
     return (
         <Container>
             <h1 className='text-center font-bold text-xl my-6'> {params.type}</h1>
-            <Grid>
+            <Grid
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 {Cuisine.map((items) => (
-                    <Link to={`/recipe/${items.id}`}>
-                        <Carts key={items.id}
-                            {...items}
-                        />
-                    </Link>
+                    <Carts key={items.id}
+                        {...items}
+                    />
                 ))}
             </Grid>
         </Container>
     )
 }
 
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
 display : grid;
 grid-template-columns : repeat(auto-fit , minmax(20rem , 1fr));//
 grid-gap : 3rem;

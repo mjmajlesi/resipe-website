@@ -29,7 +29,7 @@ function Recipe() {
     getInformation(params.name).then((res) => (
       Setvaluerecipe(res)
     ))
-  }, [])
+  }, [params.name])
   return (
     <Container>
       <Datialrecipe>
