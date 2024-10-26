@@ -15,7 +15,7 @@ function NavBar() {
             </div>
             <div className='flex items-center gap-3 flex-wrap'>
               <Search />
-              <Button className='p-3' variant='login'>
+              <Button className='p-3' variant='seccece'>
                     <a href='mailto:mohammadjavadmajlesi313@gmail.com'>Content</a>
                 </Button>
             </div>
