@@ -1,8 +1,7 @@
-import React from 'react'
-import { Irecipes } from './Populer'
-import { SplideSlide } from '@splidejs/react-splide'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Irecipes } from './Populer';
+import { SplideSlide } from '@splidejs/react-splide';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function CartsMainPage({ title, image , id }: Irecipes) {
   return (

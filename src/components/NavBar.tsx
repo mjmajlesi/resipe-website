@@ -6,7 +6,7 @@ import Search from './Search';
 import { Link } from 'react-router-dom';
 function NavBar() {
   return (
-    <section className='bg-gray-950 text-gray-200'>
+    <section className='bg-white text-black'>
         <Container>
         <div className='flex items-center justify-between flex-wrap gap-8 px-6 py-3'>
             <div className='flex items-center gap-8 flex-wrap'>
