@@ -26,7 +26,7 @@ const FormStyle = styled.form`
     }
     input{
         border: none;
-        background : linear-gradient(35deg , #004F00 , #002400);
+        background : linear-gradient(35deg , #1e98d5 , #013553);
         border-radius : 1rem ;
         padding: 1rem 2.5rem ;
         font-size: 1rem;

@@ -21,4 +21,12 @@
       cursor: pointer;
       transform: scale(1.1);
   }
+  .Dark-mode{
+    background-color: black;
+    color: white;
+  }
+  .light-mode{
+    background-color: white;
+    color: black;
+  }
 }
