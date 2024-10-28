@@ -56,8 +56,13 @@ const LinkStyle = styled(NavLink)`
     }
 
     &.active {
-        background: linear-gradient();
-        //
+        background: #1e98d5;
+        svg{
+            color: white;
+        }
+        h4{
+            color: white;
+        }
     }
 `
 

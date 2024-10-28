@@ -27,10 +27,10 @@ function Header() {
                             Spend the experience of cooking different dishes all over the world with us
                         </p>
                         <div className='flex items-center gap-4'>
-                            <Button variant='login'>
+                            <Button variant='login' className='p-3'>
                                 Popular
                             </Button>
-                            <Button variant='login'>
+                            <Button variant='login' className='p-3'>
                                 Veggie
                             </Button>
                             <GoArrowRight size={40} />

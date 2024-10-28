@@ -16,8 +16,8 @@ function NavBar() {
       preserveAspectRatio: "xMidYMid slice"
     }
   };
+  const {theme , Toggle} = useContext(ThemeContext)
 
-  const {theme} = useContext(ThemeContext)
   return (
     <section className='bg-white text-black'>
       <Container>
@@ -29,7 +29,7 @@ function NavBar() {
               width={70}
             />
             <Link className='buttun' to={'/'} >Home</Link>
-            <span >  </span>
+            <button onClick={()=> Toggle()}>{theme}</button>
           </div>
           <div className='flex items-center gap-3 flex-wrap'>
             <Search />

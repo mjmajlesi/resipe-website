@@ -10,7 +10,7 @@ interface Tchildren {
     children: ReactNode;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+const ThemeContext = createContext({} as ThemeContextType)
 
 
 const getTheme = (): string => {
