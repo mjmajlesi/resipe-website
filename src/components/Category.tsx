@@ -2,13 +2,16 @@ import React from 'react'
 import { FaHamburger, FaPizzaSlice } from 'react-icons/fa';
 import { GiNoodles, GiChopsticks } from 'react-icons/gi'
 import Container from './container';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
 function Category() {
+    const location = useLocation()
     return (
         <>
-        <Header />
+        {
+            location.pathname === "/" && <Header />
+        }
         <Container>
             <div className='flex justify-center my-8'>
                 <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'} to={'/cuisine/Italian'}>
