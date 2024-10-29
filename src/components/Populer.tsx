@@ -12,7 +12,6 @@ export interface Irecipes {
     image: string,
     vegan?: boolean,
     veryPopuler?: boolean,
-    
 }
 function Populer() {
 
@@ -21,12 +20,12 @@ function Populer() {
         getPopuler().then(res =>
             setPopuler(res.recipes)
         )
-    }, [])
+    }, [setPopuler])
 
     return (
         <Container>
             <div className=' mb-4'>
-                <h2 className='mb-3 text-base '>Our Vegetarian Picks</h2>
+                <h2 className='mb-3 text-base '>Trending</h2>
                 <Splide options={{
                     perPage: 3,
                     pagination: false,
