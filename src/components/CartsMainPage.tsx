@@ -7,11 +7,11 @@ function CartsMainPage({ title, image , id }: Irecipes) {
   return (
     <SplideSlide >
       <Link to={`./recipe/${id}`}>
-        <div className='min-h-80 overflow-hidden relative rounded-2xl'>
-          <h1 className='line-clamp-1 z-10 absolute bottom-[0%] text-white text-center w-full h-[40%] flex items-center justify-center text-xs'>{title}</h1>
+        <CartMain>
+          <h1 className='line-clamp-1 z-10 absolute bottom-[0%] text-white text-center w-full flex items-center justify-center text-xs'>{title}</h1>
           <img className='rounded-2xl absolute left-0  w-full h-full object-cover' src={image} alt={title} />
           <Gradient />
-        </div>
+        </CartMain>
       </Link>
     </SplideSlide>
   )
@@ -23,9 +23,26 @@ const Gradient = styled.div`
   width : 100%;
   height : 100%;
   border-radius : 1.5rem;
-  background : linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.5))
+  background : linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.6))
 `;
 
+const CartMain = styled.div`
+  min-height: 320px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+
+  h1 {
+    height: 40%; /* ارتفاع اولیه */
+    transition: height 0.4s ease; /* تنظیم ترنزیشن برای ارتفاع */
+  }
+
+  &:hover{
+    h1{
+      height: 90%;
+    }
+  }
+`
 
 
 export default CartsMainPage;
