@@ -19,7 +19,7 @@ function Searched() {
     }, [params.search])
     return (
         <Container>
-            <h1 className='text-center font-bold text-xl my-6'> {params.search}</h1>
+            <h1 className='text-center text-2xl font-bold mb-7 pb-11 border-b-2 '>Search : {params.search}</h1>
             <Grid>
                 {valueSearched?.map((items) => (
                     <Carts key={items.id}
