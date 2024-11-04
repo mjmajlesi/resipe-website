@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import Container from './container'
 import Button from './buttuns'
-import { GiKnifeFork } from "react-icons/gi";
 import Search from './Search';
 import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
