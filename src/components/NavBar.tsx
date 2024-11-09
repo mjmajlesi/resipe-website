@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Container from './container'
 import Button from './buttuns'
 import Search from './Search';
 import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
 import animationData from './../animation/Anime.json';
-import { ThemeContext } from './toggleTheme';
 function NavBar() {
   const defaultOptions = {
     loop: false,
@@ -15,7 +14,6 @@ function NavBar() {
       preserveAspectRatio: "xMidYMid slice"
     }
   };
-  const {theme , Toggle} = useContext(ThemeContext)
 
   return (
     <section className='bg-white text-black'>
@@ -28,7 +26,6 @@ function NavBar() {
               width={70}
             />
             <Link className='buttun' to={'/'} >Home</Link>
-            <button onClick={()=> Toggle()}>{theme}</button>
           </div>
           <div className='flex items-center gap-3 flex-wrap'>
             <Search />

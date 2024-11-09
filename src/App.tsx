@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Main from './pages/Main';

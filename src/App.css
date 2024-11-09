@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 *{
   margin: 0;
   padding: 0;
@@ -14,20 +13,11 @@
 :root{
   --blue-gradient : linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%) ;
   --gray-gradient : linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.5)) ;
-  --blue : #1e98d5
   .buttun{
       transition: all 300ms ease-in;
   }
   .buttun:hover{
       cursor: pointer;
       transform: scale(1.1);
-  }
-  .Dark-mode{
-    background-color: black;
-    color: white;
-  }
-  .light-mode{
-    background-color: white;
-    color: black;
   }
 }
