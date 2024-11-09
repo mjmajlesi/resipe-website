@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# The Recipe Site by reactjs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello everyone, in this project : 
+I tried to complete this project by using the popular JavaScript framework , Reactjs
+and by using the TypeScript language, Tailwind framework and [Lottiefiles animations](https://lottiefiles.com/).🔥
 
-## Available Scripts
+![image 1](./src/image/image1.png)
 
-In the project directory, you can run:
+![image 2](./src/image/image2.png)
 
-### `npm start`
+## Project features
+1. Ability to search foods and categorize them appropriately
+2. just 23 line css code 🤯 (often by tailwind).
+3. 5 page by react-router-dom.
+4. this project completely written by typescript. 
+5. API and data are used because of the unavailability of the back-end developer, the site [spoonacular](https://spoonacular.com/food-api) fake API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features that will be added in the future:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Responsive
+- Dark mode 
 
-### `npm test`
+## Part of App.tsx
+```javascript
+function App() {
+  const location = useLocation();
+  return (
+    <>
+      <NavBar />
+      <Category />
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route element={<Main />} path='/' />
+          <Route element={<Cuisine />} path='/cuisine/:type' />
+          <Route element={<Searched />} path='/searched/:search' />
+          <Route element={<Recipe />} path='/recipe/:name' />
+          <Route element={<Recipe />} path='/cuisine/:type/recipe/:name' />
+        </Routes>
+      </AnimatePresence>
+      <Footer />
+    </>
+  );
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export default App;
+```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## For more :
+[github](https://github.com/mjmajlesi) <br>
+[telegram](https://t.me/Mj_majlesi)
