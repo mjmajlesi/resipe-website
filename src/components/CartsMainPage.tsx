@@ -8,7 +8,7 @@ function CartsMainPage({ title, image , id }: Irecipes) {
     <SplideSlide >
       <Link to={`./recipe/${id}`}>
         <CartMain>
-          <h1 className='line-clamp-1 z-10 absolute bottom-[0%] text-white text-center w-full flex items-center justify-center text-xs'>{title}</h1>
+          <h1 className='line-clamp-1 z-10 absolute bottom-[0%] text-white text-center w-full flex items-center justify-center text-xl'>{title}</h1>
           <img className='rounded-2xl absolute left-0  w-full h-full object-cover' src={image} alt={title} />
           <Gradient />
         </CartMain>

@@ -21,3 +21,7 @@
       transform: scale(1.1);
   }
 }
+
+body{
+  @apply !bg-[#010211] text-[#d6d7e5]
+}

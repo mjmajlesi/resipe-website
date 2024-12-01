@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getCuisine } from '../api';
 import useLocalStorage from '../components/useLocalStorage';
 import { Irecipes } from '../components/Populer';

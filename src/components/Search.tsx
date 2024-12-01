@@ -26,9 +26,9 @@ const FormStyle = styled.form`
     }
     input{
         border: none;
-        background : linear-gradient(35deg , #1e98d5 , #013553);
+        background : #d6d7e5;
         border-radius : 1rem ;
-        padding: 1rem 2.5rem ;
+        padding: 0.75rem 2.5rem ;
         font-size: 1rem;
         color: white;
     }

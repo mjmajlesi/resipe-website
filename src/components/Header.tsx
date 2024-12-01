@@ -23,8 +23,8 @@ function Header() {
                             The joy of cooking...
                         </h1>
                         <p className='text-[1rem] mb-8'>
-                            More than 100 cooking lessons of different cuisines from different races <br />
-                            Spend the experience of cooking different dishes all over the world with us
+                            More than 100 cooking lessons of different<br /> cuisines from different races 
+                            Spend<br />  the experience of cooking differentdishes 
                         </p>
                         <div className='flex items-center gap-4'>
                             <Button variant='login' className='p-3'>

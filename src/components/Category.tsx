@@ -15,7 +15,7 @@ function Category() {
         <Container>
             <div className='flex justify-center my-8'>
                 <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'} to={'/cuisine/Italian'}>
-                    <FaPizzaSlice className=' text-white' />
+                    <FaPizzaSlice />
                     <h4>Italian</h4>
                 </LinkStyle>
                 <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/American'}>
@@ -42,20 +42,20 @@ const LinkStyle = styled(NavLink)`
     align-items: center;
     justify-content: center;
     margin-right: 2rem;
-    background:  linear-gradient(35deg, #494949 , #313131);
-    width: 6rem;
-    height: 6rem;
+    background: linear-gradient(35deg, #494949 , #313131);
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     transform: scale(0.8);//
 
     h4 {
         color: white;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     svg {
         color: white;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     &.active {

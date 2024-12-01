@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';;
 function Footer() {
     return (
         <Container>
-            <div className='flex items-center justify-between mt-9 pt-5 pb-4 border-t-4'>
+            <div className='flex items-center justify-between mt-20 pt-5 pb-4 border-t-4 border-t-white/10'>
                 <div className='flex flex-col items-start justify-center gap-4'>
                     <div className='flex items-center justify-between gap-3'>
                         <a href='https://t.me/Mj_majlesi' target='_blank' rel="noreferrer">
