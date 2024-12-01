@@ -5,12 +5,18 @@ import Container from './container';
 import { NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
+import Searchmainpage from './searchmainpage';
 function Category() {
     const location = useLocation()
     return (
         <>
         {
-            location.pathname === "/" && <Header />
+            location.pathname === "/" && (
+            <>
+            <Header />
+            <Searchmainpage />
+            </>
+        )
         }
         <Container>
             <div className='flex justify-center my-8'>

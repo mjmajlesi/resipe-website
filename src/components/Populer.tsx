@@ -27,7 +27,7 @@ function Populer() {
             <div className=' mb-4'>
                 <h2 className='mb-3 text-base '>Trending</h2>
                 <Splide options={{
-                    perPage: 3,
+                    perPage: 4,
                     pagination: false,
                     arrows: false,
                     drag: 'free',
