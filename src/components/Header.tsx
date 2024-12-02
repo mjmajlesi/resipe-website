@@ -5,8 +5,6 @@ import animationData from "./../animation/Animation.json";
 import Container from "./container";
 import { GoArrowRight } from "react-icons/go";
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
-import { MouseParallaxContainer } from "react-parallax-mouse";
 
 function Header() {
   const defaultOptions = {
@@ -32,7 +30,7 @@ function Header() {
   return (
     <Container>
 
-      <div className="flex items-center justify-between gap-5 flex-wrap xl:h-screen">
+      <div className="flex items-center justify-between gap-5 flex-wrap xl:h-[80vh]">
         <div className="flex flex-col items-start justify-center">
           <div className="p-4">
             <h1 className="font-bold text-[3rem] mb-5 mt-4">

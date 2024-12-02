@@ -33,14 +33,14 @@ function Recipe() {
   return (
     <Container>
       <Datialrecipe>
-        <div className='flex flex-col items-center'>
-          <h1 className='mb-6 font-semibold'>{valuerecipe?.title}</h1>
-          <img width={400} className='rounded-lg' src={valuerecipe?.image} alt="" />
+        <div className='flex flex-col items-center gap-16'>
+          <h1 className='text-2xl font-semibold'>{valuerecipe?.title}</h1>
+          <img width={500} className='rounded-lg' src={valuerecipe?.image} alt="" />
         </div>
         <div className='w-400 p-1'>
           <Button
             onClick={() => SetActiveTab("Instructions")}
-            variant='normal'
+            variant='dark'
             className={ActiveTab === "Instructions" ? "active" : ""}
           >
             Instructions
@@ -48,7 +48,7 @@ function Recipe() {
           <Button
             onClick={() => SetActiveTab("Ingredients")}
             className={ActiveTab === "Ingredients" ? "active" : ""}
-            variant='normal'
+            variant='dark'
           >
             Ingredients
           </Button>
@@ -80,6 +80,8 @@ function Recipe() {
 const Datialrecipe = styled.div`
   margin: 5rem 0;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   gap: 100px;
   .active {
     background: linear-gradient(45deg , #494949 , #313131);

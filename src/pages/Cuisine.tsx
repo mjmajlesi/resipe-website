@@ -20,7 +20,7 @@ function Cuisine() {
 
     return (
         <Container>
-            <h1 className='text-center font-bold text-xl my-6'> {params.type}</h1>
+            <h1 className='text-center font-semibold text-3xl my-10'> {params.type}</h1>
             <Grid
                 animate={{ opacity: 1 }}
                 initial={{ opacity: 0 }}

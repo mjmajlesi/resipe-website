@@ -19,8 +19,8 @@ function Veggie() {
 
     return (
         <Container>
-            <div className=' mt-8'>
-                <h2 className='mb-3'>Our Vegetarian Picks</h2>
+            <div className=' pb-2 mt-8'>
+                <h2 className='mb-10 text-3xl font-semibold text-center'>Our Vegetarian Picks</h2>
                 <Splide options={{
                     perPage: 4,
                     pagination: false,

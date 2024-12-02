@@ -7,11 +7,11 @@ function Searchmainpage() {
   return (
     <Container>
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0, y: 90 }}
         whileInView={{
           opacity: 1,
           y: 1,
-          transition: { delay: 0.3, duration: 0.5 },
+          transition: { delay: 0.2, duration: 0.5 },
         }}
         viewport={{ once: false, amount: 0.5 }}
         className="flex items-center justify-between mb-52"
