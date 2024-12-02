@@ -2,37 +2,26 @@ import React from 'react'
 import { FaHamburger, FaPizzaSlice } from 'react-icons/fa';
 import { GiNoodles, GiChopsticks } from 'react-icons/gi'
 import Container from './container';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Header from './Header';
-import Searchmainpage from './searchmainpage';
 function Category() {
-    const location = useLocation()
     return (
         <>
-        {
-            location.pathname === "/" && (
-            <>
-            <Header />
-            <Searchmainpage />
-            </>
-        )
-        }
         <Container>
-            <div className='flex justify-center my-8'>
-                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'} to={'/cuisine/Italian'}>
+            <div className='flex flex-row my-1'>
+                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg '} to={'/cuisine/Italian'}>
                     <FaPizzaSlice />
                     <h4>Italian</h4>
                 </LinkStyle>
-                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/American'}>
+                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg '}  to={'/cuisine/American'}>
                     <FaHamburger />
                     <h4>American</h4>
                 </LinkStyle>
-                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/Thai'}>
+                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg'}  to={'/cuisine/Thai'}>
                     <GiNoodles />
                     <h4>Thai</h4>
                 </LinkStyle>
-                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg mr-8'}  to={'/cuisine/Japanese'}>
+                <LinkStyle className={'flex flex-col items-center justify-center rounded-lg'}  to={'/cuisine/Japanese'}>
                     <GiChopsticks />
                     <h4>Japanese</h4>
                 </LinkStyle>
@@ -47,10 +36,10 @@ const LinkStyle = styled(NavLink)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 2rem;
+    margin-right : 0.2rem;
     background: linear-gradient(35deg, #494949 , #313131);
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 7rem;
     border-radius: 50%;
     transform: scale(0.8);//
 
