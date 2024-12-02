@@ -7,6 +7,7 @@ import Recipe from './pages/Recipe';
 import { AnimatePresence } from 'framer-motion'
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import About from './pages/About';
 
 function App() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function App() {
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route element={<Main />} path='/' />
+          <Route element={<About />} path='/about' />
           <Route element={<Cuisine />} path='/cuisine/:type' />
           <Route element={<Searched />} path='/searched/:search' />
           <Route element={<Recipe />} path='/recipe/:name' />
