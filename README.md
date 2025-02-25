@@ -4,9 +4,21 @@ Hello everyone, in this project :
 I tried to complete this project by using the popular JavaScript framework , Reactjs
 and by using the TypeScript language, Tailwind framework and [Lottiefiles animations](https://lottiefiles.com/).🔥
 
-![image 1](./src/image/image1.png)
+### main page
 
-![image 2](./src/image/image2.png)
+![image 1](./src/image/readme/main1.png)
+
+![image 2](./src/image/readme/main2.png)
+
+![image 3](./src/image/readme/main3.png)
+
+### result Search page
+
+![image 4](./src/image/readme/resultSearch.png)
+
+### Show about food page
+
+![image 5](./src/image/readme/ShowDeatile.png)
 
 ## Project features
 1. Ability to search foods and categorize them appropriately
@@ -18,7 +30,6 @@ and by using the TypeScript language, Tailwind framework and [Lottiefiles animat
 ## Features that will be added in the future:
 
 - Responsive
-- Dark mode 
 
 ## Part of App.tsx
 ```javascript
