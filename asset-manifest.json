@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/resipe-website/static/css/main.55cb2240.css",
+    "main.js": "/resipe-website/static/js/main.3e9ea619.js",
+    "static/media/pexels-dapur-melodi-192125-1109197.jpg": "/resipe-website/static/media/pexels-dapur-melodi-192125-1109197.f57386546f4079d25532.jpg",
+    "index.html": "/resipe-website/index.html",
+    "main.55cb2240.css.map": "/resipe-website/static/css/main.55cb2240.css.map",
+    "main.3e9ea619.js.map": "/resipe-website/static/js/main.3e9ea619.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55cb2240.css",
+    "static/js/main.3e9ea619.js"
+  ]
+}
