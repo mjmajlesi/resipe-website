@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='resipe-website'>
         <App />
     </Router>
   </React.StrictMode>
