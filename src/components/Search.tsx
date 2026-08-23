@@ -1,44 +1,35 @@
-import React, { useState } from 'react'
-import styled from 'styled-components';
-import { FaSearch } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-function Search() {
+import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-    const [valueInput , SetValueInput] = useState("");
-    const navigate = useNavigate()
-    const submitHandler = ()=>{
-        navigate(`searched/${valueInput}`)
-    }
-    return (
-        <FormStyle onSubmit={submitHandler}>
-            <div>
-                <input onChange={(e)=> SetValueInput(e.target.value)} className='text-gray-700' type="text" placeholder='Search...' value={valueInput} />
-                <FaSearch />
-            </div>
-        </FormStyle>
-    )
+function Search({ large = false }: { large?: boolean }) {
+  const [valueInput, SetValueInput] = useState("");
+  const navigate = useNavigate();
+
+  const submitHandler = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (valueInput.trim()) navigate(`searched/${encodeURIComponent(valueInput.trim())}`);
+  };
+
+  return (
+    <form onSubmit={submitHandler} role="search" className="w-full">
+      <div
+        className={`flex items-center gap-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm transition-all focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/30 ${
+          large ? "px-6 py-4" : "px-4 py-2.5"
+        }`}
+      >
+        <FaSearch className="shrink-0 text-white/50" aria-hidden="true" />
+        <input
+          onChange={(e) => SetValueInput(e.target.value)}
+          type="search"
+          placeholder="Search recipes..."
+          aria-label="Search recipes"
+          value={valueInput}
+          className={`w-full bg-transparent text-white placeholder-white/40 outline-none ${large ? "text-lg" : "text-sm"}`}
+        />
+      </div>
+    </form>
+  );
 }
 
-
-const FormStyle = styled.form`
-    div{
-        position: relative;
-    }
-    input{
-        border: none;
-        background : #d6d7e5;
-        border-radius : 1rem ;
-        padding: 0.75rem 2.5rem ;
-        font-size: 1rem;
-        color: white;
-    }
-    svg{
-        position: absolute;
-        top: 50%;
-        left: 0%;
-        transform: translate(100% , -50%);
-        color: white;
-    }
-`
-
-export default Search
+export default Search;

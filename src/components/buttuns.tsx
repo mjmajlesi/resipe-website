@@ -1,29 +1,24 @@
-import React, { ComponentProps } from 'react'
+import React, { ComponentProps } from "react";
 
-type Tvariant = "dark" | "normal" | "login" | "seccece" | "danger"
+type Tvariant = "primary" | "ghost" | "outline";
 
-type Tchildren =  ComponentProps<"button"> & {
-  variant? : Tvariant
-}
+type Tchildren = ComponentProps<"button"> & {
+  variant?: Tvariant;
+};
 
-export default function Button({children , className , variant , ...root}:Tchildren) {
-  const styleButtun = "p-2 rounded-md "
+const variants: Record<Tvariant, string> = {
+  primary: "bg-accent text-[#1a1206] hover:bg-accent-strong shadow-md shadow-accent/25",
+  ghost: "bg-white/5 text-white border border-white/10 hover:bg-white/10",
+  outline: "bg-transparent text-accent border-2 border-accent hover:bg-accent hover:text-[#1a1206]",
+};
+
+export default function Button({ children, className = "", variant = "primary", ...root }: Tchildren) {
   return (
-    <button  {...root} className={`${styleButtun} ${className || ""}`}  style={{...Changevariant(variant)}}>{children}</button>
-  )
+    <button
+      {...root}
+      className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent active:scale-95 ${variants[variant]} ${className}`}
+    >
+      {children}
+    </button>
+  );
 }
-
-function Changevariant(variant? : Tvariant) {
-  switch (variant) {
-    case "normal":
-      return {backgroundColor : "white" , color : "black" , border : "2px" , borderColor : "black"}
-    case "dark":
-      return {backgroundColor : "black" , color : "white"}
-    case "login":
-      return {backgroundColor : "#1e98d5" , color : "white"}
-      case "seccece":
-      return {backgroundColor : "green" , color : "white"}
-      case "danger":
-      return {backgroundColor : "red" , color : "white", padding : " 0 5px"}
-  }
-  }

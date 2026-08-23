@@ -6,9 +6,10 @@ import { BrowserRouter as Router } from 'react-router-dom'
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+// ponytail: gh-pages needs the repo basename; NODE_ENV=development runs at root
 root.render(
   <React.StrictMode>
-    <Router basename='resipe-website'>
+    <Router basename={process.env.NODE_ENV === 'development' ? undefined : process.env.PUBLIC_URL}>
         <App />
     </Router>
   </React.StrictMode>

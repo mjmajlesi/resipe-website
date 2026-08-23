@@ -1,11 +1,10 @@
 import React from "react";
+
 export type Tchildern = {
-    children : React.ReactNode
+  children: React.ReactNode;
+  className?: string;
 };
-export default function Container({children}: Tchildern){
-    return(
-        <div className="my-0 mx-[15%]">
-            {children}
-        </div>
-    )
+
+export default function Container({ children, className }: Tchildern) {
+  return <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className || ""}`}>{children}</div>;
 }

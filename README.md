@@ -1,61 +1,33 @@
-# The Recipe Site by reactjs
+# Savora — Recipe Explorer 🍳
 
-Hello everyone, in this project : 
-I tried to complete this project by using the popular JavaScript framework , Reactjs
-and by using the TypeScript language, Tailwind framework and [Lottiefiles animations](https://lottiefiles.com/).🔥
+A recipe explorer built with React, TypeScript and Tailwind CSS. Browse trending dishes, vegetarian picks and cuisines from around the world.
 
-### main page
+### Main page
 
 ![image 1](./src/image/readme/main1.png)
 
-![image 2](./src/image/readme/main2.png)
-
-![image 3](./src/image/readme/main3.png)
-
-### result Search page
+### Search & details
 
 ![image 4](./src/image/readme/resultSearch.png)
 
-### Show about food page
-
 ![image 5](./src/image/readme/ShowDeatile.png)
 
-## Project features
-1. Ability to search foods and categorize them appropriately
-2. just 23 line css code 🤯 (often by tailwind).
-3. 5 page by react-router-dom.
-4. this project completely written by typescript. 
-5. API and data are used because of the unavailability of the back-end developer, the site [spoonacular](https://spoonacular.com/food-api) fake API.
+## Features
 
-## Features that will be added in the future:
+1. Search any dish, browse by cuisine (Italian, American, Thai, Japanese)
+2. Trending & vegetarian carousels with skeleton loading states
+3. Recipe detail page with ingredients (with pictures), instructions, tags and video links
+4. Responsive design — mobile hamburger menu included
+5. Data from [TheMealDB](https://www.themealdb.com/api.php) — free, no API key, no rate limits
+6. Fully written in TypeScript
 
-- Responsive
+## Run locally
 
-## Part of App.tsx
-```javascript
-function App() {
-  const location = useLocation();
-  return (
-    <>
-      <NavBar />
-      <Category />
-      <AnimatePresence mode='wait'>
-        <Routes location={location} key={location.pathname}>
-          <Route element={<Main />} path='/' />
-          <Route element={<Cuisine />} path='/cuisine/:type' />
-          <Route element={<Searched />} path='/searched/:search' />
-          <Route element={<Recipe />} path='/recipe/:name' />
-          <Route element={<Recipe />} path='/cuisine/:type/recipe/:name' />
-        </Routes>
-      </AnimatePresence>
-      <Footer />
-    </>
-  );
-}
-
-export default App;
+```bash
+npm install
+npm start
 ```
 
-## For more :
-[github](https://github.com/mjmajlesi) <br>
-[telegram](https://t.me/Mj_majlesi)
+## For more
+
+[github](https://github.com/mjmajlesi) · [telegram](https://t.me/Mj_majlesi)

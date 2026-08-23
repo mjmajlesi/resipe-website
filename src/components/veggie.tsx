@@ -1,42 +1,25 @@
-import React, { useEffect } from 'react'
-import { getVegetarian } from '../api';
-import Carts from './CartsMainPage';
-import { Splide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css'
-import useLocalStorage from './useLocalStorage';
-import { Irecipes } from './Populer';
-import Container from './container';
-import CartsMainPage from './CartsMainPage';
+import React, { useEffect, useState } from "react";
+import { getVegetarian, IMeal } from "../api";
+import useLocalStorage from "./useLocalStorage";
+import MealCarousel from "./MealCarousel";
 
 function Veggie() {
+  const [veggie, setVeggie] = useLocalStorage<IMeal[]>("veggie", []);
+  const [loading, setLoading] = useState(veggie.length === 0);
 
-    const [Veggie, setveggie] = useLocalStorage<Irecipes[]>("Veggie", []);
-    useEffect(() => {
-        getVegetarian().then(res =>
-            setveggie(res.recipes)
-        )
-    }, [])
+  useEffect(() => {
+    let cancelled = false;
+    getVegetarian().then((meals) => {
+      if (cancelled) return;
+      if (meals.length) setVeggie(meals);
+      setLoading(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [setVeggie]);
 
-    return (
-        <Container>
-            <div className=' pb-2 mt-8'>
-                <h2 className='mb-10 text-3xl font-semibold text-center'>Our Vegetarian Picks</h2>
-                <Splide options={{
-                    perPage: 4,
-                    pagination: false,
-                    arrows: false,
-                    drag: 'free',
-                    gap: '4rem'
-                }}>
-                    {
-                        Veggie.map(recipe => (
-                            <CartsMainPage key={recipe.id} {...recipe} />
-                        ))
-                    }
-                </Splide>
-            </div>
-        </Container>
-    )
+  return <MealCarousel id="veggie" title="Our vegetarian picks" meals={veggie} loading={loading} />;
 }
 
-export default Veggie
+export default Veggie;

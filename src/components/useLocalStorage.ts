@@ -1,16 +1,22 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-export default function useLocalStorage<T>(kay: string , initialvalue: T){
-        const [value , setValue] = useState<T>(()=>{
-                let LocalStorage = localStorage.getItem("Popular")
-                return LocalStorage !== null ? JSON.parse(LocalStorage) : initialvalue
-            }
-        );
+export default function useLocalStorage<T>(key: string, initialValue: T) {
+  const [value, setValue] = useState<T>(() => {
+    try {
+      const stored = localStorage.getItem(key);
+      return stored !== null ? (JSON.parse(stored) as T) : initialValue;
+    } catch {
+      return initialValue;
+    }
+  });
 
-        useEffect(() => {
-            localStorage.setItem(kay , JSON.stringify(value))
-        }, [kay , value])
+  useEffect(() => {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      // storage full or unavailable — cache is best-effort
+    }
+  }, [key, value]);
 
-        return [value , setValue] as [typeof value , typeof setValue]
-        
-};
+  return [value, setValue] as [T, typeof setValue];
+}
